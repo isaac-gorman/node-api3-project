@@ -4,7 +4,7 @@ const userRoutes = require("./routers/userRouter");
 const { logger, errorHandler } = require("./middleware/globalMiddleware");
 
 const server = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 // --------------------- MIDDLEWARE QUEUE ---------------------
 server.use(express.json());
 // Custom Middlware
